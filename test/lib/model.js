@@ -36,4 +36,14 @@ describe('model', () => {
             expect(cb).toHaveBeenCalled();
         });
     });
+
+    describe('#get', () => {
+        it('should return a data item', () => {
+            const data = { hello: 'world' };
+
+            model.set(data);
+
+            expect(model.get('hello')).toEqual(data.hello);
+        });
+    });
 });

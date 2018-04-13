@@ -3,12 +3,11 @@ import Model from '../lib/model.js';
 export default class DiaryModel extends Model {
     constructor(date) {
         super();
-        this.day = date.day;
-        this.month = date.month;
+        this.set(date);
     }
 
     url() {
-        return `api/get/namedays?day=${this.day}&month=${this.month}`;
+        return `api/get/namedays?day=${this.get('day')}&month=${this.get('month')}`;
     }
 
     parserResponse(response) {

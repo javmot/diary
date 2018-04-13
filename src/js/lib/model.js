@@ -22,11 +22,12 @@ export default class Model extends Obserbable {
 
     set(data) {
         this.data = Object.assign({}, this.data, data);
-
         this.publish('update', this.data);
     }
 
-    get() {
-        return Object.assign({}, this.data);
+    get(item) {
+        return item === undefined ?
+            Object.assign({}, this.data) :
+            this.data[item];
     }
 }

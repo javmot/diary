@@ -15,9 +15,10 @@ describe('model', () => {
         it('should request data and store in model', () => {
             const response = { data: { hello: 'world' } };
 
-            fetchMock.get(diaryModel.url(), response);
+            fetchMock.get(`api/get/namedays?day=${day}&month=${month}`, response);
 
-            diaryModel.fetch().then(() => expect(diaryModel.get()).toEqual(response.data));
+            diaryModel.fetch()
+                .then(() => expect(diaryModel.get('hello')).toEqual(response.data.hello));
         });
     });
 });

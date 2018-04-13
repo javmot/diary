@@ -9,6 +9,9 @@
         "max-len": ["error", { "code": 100 }],
         "class-methods-use-this": 0
     },
+    "globals": {
+        "moment": true
+    },
     "env": {
         "browser": true,
         "jasmine": true,
