@@ -10,6 +10,8 @@
         "class-methods-use-this": 0
     },
     "env": {
-        "browser": true
+        "browser": true,
+        "jasmine": true,
+        "node": true
     }
 }

@@ -8,6 +8,6 @@ app.use('/api', (req, res) => {
     const url = apiUrl(req.url);
     req.pipe(request(url)).pipe(res);
 });
-app.use('/', express.static('source'));
+app.use('/', express.static('src'));
 
 app.listen(process.env.PORT || 3000);

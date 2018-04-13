@@ -1,3 +1,3 @@
-### JS Sandbox
+### Diary
 
-Repo to do js ideas and samples
+Diary app
