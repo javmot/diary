@@ -1,0 +1,21 @@
+{
+  "name": "diary",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Javier Mota",
+    "email": "javier.mota.diaz@gmail.com"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint **/*.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0"
+  }
+}
