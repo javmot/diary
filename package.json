@@ -1,6 +1,7 @@
 {
   "name": "diary",
   "version": "0.0.1",
+  "repository": "https://github.com/javmot/diary",
   "license": "UNLICENSED",
   "author": {
     "name": "Javier Mota",
