@@ -8,7 +8,7 @@
     "email": "javier.mota.diaz@gmail.com"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./src/**/**/*.js",
+    "lint": "./node_modules/.bin/eslint './src/**/*.js'",
     "test": "./node_modules/.bin/karma start karma.conf.js",
     "server": "node server.js"
   },

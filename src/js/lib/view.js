@@ -16,6 +16,6 @@ export default class View {
 
     remove() {
         this.el = undefined;
-        this.model.unsuscribe(this.render);
+        this.model.unsubscribe(this.render);
     }
 }
