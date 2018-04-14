@@ -1,13 +1,15 @@
 import DiaryModel from 'app/diary/model';
 import fetchMock from 'fetch-mock';
+import moment from 'moment';
 
 describe('model', () => {
     let diaryModel;
-    const day = 3;
-    const month = 4;
+    const now = moment();
+    const day = now.date();
+    const month = now.month();
 
     beforeEach(() => {
-        diaryModel = new DiaryModel({ day, month });
+        diaryModel = new DiaryModel(now);
         fetchMock.restore();
     });
 

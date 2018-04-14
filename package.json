@@ -8,7 +8,7 @@
     "email": "javier.mota.diaz@gmail.com"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint './src/**/*.js'",
+    "lint": "./node_modules/.bin/eslint './src/**/*.js' './test/**/*.js'",
     "test": "./node_modules/.bin/karma start karma.conf.js",
     "server": "node server.js"
   },
@@ -23,6 +23,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
     "eslint-plugin-import": "^2.10.0",
     "fetch-mock": "^6.3.0",
     "jasmine": "^3.1.0",
@@ -39,7 +40,6 @@
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.22.0",
-    "momentjs": "^2.0.0",
     "request": "^2.85.0"
   }
 }

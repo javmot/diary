@@ -1,4 +1,4 @@
-const path = require('path');
+const webpackConfig = require('./webpack.conf');
 
 module.exports = (config) => {
     config.set({
@@ -8,23 +8,7 @@ module.exports = (config) => {
         preprocessors: {
             'test-index.js': ['webpack'],
         },
-        webpack: {
-            mode: 'production',
-            module: {
-                rules: [
-                    {
-                        test: /\.js$/,
-                        exclude: /node_modules/,
-                        loader: 'babel-loader?presets[]=es2015',
-                    },
-                ],
-            },
-            resolve: {
-                alias: {
-                    app: path.resolve(__dirname, 'src/js'),
-                },
-            },
-        },
+        webpack: webpackConfig,
         reporters: ['progress'],
         port: 9876,
         autoWatch: false,
