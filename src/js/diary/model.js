@@ -1,16 +1,15 @@
 import Model from '../lib/model.js';
 
 export default class DiaryModel extends Model {
-    constructor(momentDate) {
+    constructor(date) {
         super();
-        this.set({
-            day: momentDate.date(),
-            month: momentDate.month(),
-        });
+        this.set({ date });
     }
 
     url() {
-        return `api/get/namedays?day=${this.get('day')}&month=${this.get('month')}`;
+        const day = this.get('date').date();
+        const month = this.get('date').month();
+        return `api/get/namedays?day=${day}&month=${month}`;
     }
 
     parserResponse(response) {

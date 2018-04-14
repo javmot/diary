@@ -8,8 +8,8 @@ export default class DiaryCollection extends Collection {
     }
 
     addWeekModel() {
-        const now = moment();
         for (let day = 1; day <= 7; day++) {
+            const now = moment();
             this.add(now.isoWeekday(day));
         }
     }
