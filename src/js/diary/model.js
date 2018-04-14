@@ -1,9 +1,12 @@
 import Model from '../lib/model.js';
 
 export default class DiaryModel extends Model {
-    constructor(date) {
+    constructor(momentDate) {
         super();
-        this.set(date);
+        this.set({
+            day: momentDate.date(),
+            month: momentDate.month(),
+        });
     }
 
     url() {

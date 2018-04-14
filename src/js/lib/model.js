@@ -1,9 +1,9 @@
 import Obserbable from './observable.js';
 
 export default class Model extends Obserbable {
-    constructor() {
+    constructor(data) {
         super();
-        this.data = {};
+        this.data = data || {};
     }
 
     fetch() {
