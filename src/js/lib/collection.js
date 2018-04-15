@@ -1,14 +1,14 @@
 import Observable from './observable';
 
 export default class Collection extends Observable {
-    constructor(ModelClass) {
+    constructor(Model) {
         super();
-        this.ModelClass = ModelClass;
+        this.Model = Model;
         this.models = [];
     }
 
     add(data) {
-        const model = new this.ModelClass(data);
+        const model = new this.Model(data);
         this.models.push(model);
         this.publish('add', model);
     }
