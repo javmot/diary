@@ -11,7 +11,8 @@
     "lint": "./node_modules/.bin/eslint '**/*.js'",
     "test": "./node_modules/.bin/karma start karma.conf.js",
     "webpack": "./node_modules/.bin/webpack --config webpack.conf.js",
-    "server": "node server.js"
+    "server": "node server.js",
+    "app": "npm run webpack && npm run server"
   },
   "engines": {
     "node": ">=4"

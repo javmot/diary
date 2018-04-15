@@ -17,7 +17,7 @@ export default class Model extends Obserbable {
     }
 
     parserResponse(response) {
-        return responseon();
+        return response.json();
     }
 
     set(data) {

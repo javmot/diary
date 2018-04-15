@@ -13,6 +13,6 @@ export default class DiaryModel extends Model {
     }
 
     parserResponse(response) {
-        return responseon().then(json => json.data);
+        return response.json().then(json => json.data);
     }
 }
