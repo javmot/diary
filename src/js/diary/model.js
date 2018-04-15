@@ -1,4 +1,4 @@
-import Model from '../lib/model.js';
+import Model from '../lib/model';
 
 export default class DiaryModel extends Model {
     constructor(date) {
@@ -13,6 +13,6 @@ export default class DiaryModel extends Model {
     }
 
     parserResponse(response) {
-        return response.json().then(json => json.data);
+        return responseon().then(json => json.data);
     }
 }

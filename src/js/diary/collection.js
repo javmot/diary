@@ -1,5 +1,6 @@
-import Collection from '../lib/collection.js';
-import DiaryModel from './model.js';
+import moment from 'moment';
+import Collection from '../lib/collection';
+import DiaryModel from './model';
 
 export default class DiaryCollection extends Collection {
     constructor() {

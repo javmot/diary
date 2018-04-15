@@ -1,4 +1,4 @@
-import Obserbable from './observable.js';
+import Obserbable from './observable';
 
 export default class Model extends Obserbable {
     constructor(data) {
@@ -17,7 +17,7 @@ export default class Model extends Obserbable {
     }
 
     parserResponse(response) {
-        return response.json();
+        return responseon();
     }
 
     set(data) {

@@ -8,14 +8,17 @@
         "max-depth": ["error", 3],
         "max-len": ["error", { "code": 100 }],
         "class-methods-use-this": 0,
-        "no-plusplus": 0,
-        "import/extensions": 0
+        "no-plusplus": 0
     },
     "parserOptions": {
         "sourceType": "module"
     },
-    "globals": {
-        "moment": true
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "webpack.conf.js"
+        }
+      }
     },
     "env": {
         "browser": true,

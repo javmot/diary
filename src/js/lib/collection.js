@@ -1,4 +1,4 @@
-import Observable from './observable.js';
+import Observable from './observable';
 
 export default class Collection extends Observable {
     constructor(ModelClass) {

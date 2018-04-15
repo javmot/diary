@@ -1,9 +1,0 @@
-{
-    "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "webpack.conf.js"
-        }
-      }
-    }
-}
