@@ -1,0 +1,100 @@
+.flex__container {
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.flex__container--row {
+    @include make-flex-container();
+    @include container-correction();
+}
+
+.flex__container--column {
+    @include make-flex-container(column);
+    width: 100%;
+}
+
+.flex__item {
+    flex: auto;
+    .flex__container--row > & {
+        max-width: 100%;
+        @include make-base-item();
+    }
+    .flex__container--column > & {
+        max-height: 100%;
+        @include make-base-item(column);
+        width: 100%;
+    }
+
+    .flex__container--row > &.flex__item--nogutter,
+    .flex__container--nogutter.flex__container--row > & {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .flex__container--column > &.flex__item--nogutter,
+    .flex__container--nogutter.flex__container--column > & {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+.flex__container--align-start {
+    align-items: flex-start;
+}
+
+.flex__container--align-end {
+    align-items: flex-end;
+}
+
+.flex__container--align-baseline {
+    align-items: baseline;
+}
+
+.flex__container--align-stretch {
+    align-items: stretch;
+}
+
+.flex__item--align-start {
+    align-self: flex-start;
+}
+
+.flex__item--align-center {
+    align-self: center;
+}
+
+.flex__item--align-end {
+    align-self: flex-end;
+}
+
+.flex__item--align-baseline {
+    align-self: baseline;
+}
+
+.flex__item--align-stretch {
+    align-self: stretch;
+}
+
+.flex__container--justify-start {
+    justify-content: flex-start;
+}
+
+.flex__container--justify-center {
+    justify-content: center;
+}
+
+.flex__container--justify-end {
+    justify-content: flex-end;
+}
+
+.flex__container--justify-around {
+    justify-content: space-around;
+}
+
+.flex__container--justify-between {
+    justify-content: space-between;
+}
+
+@for $i from 1 through $items {
+    @include make-flex-item-span($i);
+}

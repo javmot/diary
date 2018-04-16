@@ -10,9 +10,10 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint '**/*.js'",
     "test": "./node_modules/.bin/karma start karma.conf.js",
+    "sass": "./node_modules/.bin/node-sass src/scss/_main.scss src/css/main.css",
     "webpack": "./node_modules/.bin/webpack --config webpack.conf.js",
     "server": "node server.js",
-    "app": "npm run lint && npm run webpack && npm run server"
+    "app": "npm run lint && npm run test && npm run webpack && npm run sass && npm run server"
   },
   "engines": {
     "node": ">=4"
@@ -35,6 +36,8 @@
     "karma-jasmine-matchers": "^3.7.0",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^3.0.0",
+    "node-sass": "^4.8.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },

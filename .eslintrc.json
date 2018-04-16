@@ -8,6 +8,7 @@
         "max-depth": ["error", 3],
         "max-len": ["error", { "code": 100 }],
         "class-methods-use-this": 0,
+        "import/no-extraneous-dependencies": 0,
         "no-plusplus": 0
     },
     "parserOptions": {

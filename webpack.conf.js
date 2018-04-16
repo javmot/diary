@@ -1,3 +1,4 @@
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -14,6 +15,11 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader?presets[]=es2015',
             },
+            {
+                test: /\.handlebars$/,
+                exclude: /node_modules/,
+                loader: 'handlebars-loader',
+            },
         ],
     },
     resolve: {
@@ -21,4 +27,7 @@ module.exports = {
             app: path.resolve(__dirname, 'src/js'),
         },
     },
+    /* plugins: [
+        new UglifyJsPlugin(),
+    ], */
 };

@@ -1,0 +1,41 @@
+@mixin make-flex-container($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin container-correction($direction: row) {
+    $margin: $gutter / 2;
+    @if $direction == row {
+        margin-right: -($margin);
+        margin-left: -($margin);
+    } @else {
+        margin-top: -($margin);
+        margin-bottom: -($margin);
+    }
+}
+
+@mixin make-base-item($direction: row) {
+    vertical-align: middle;
+    $padding: $gutter / 2;
+    @if $direction == row {
+        padding-right: $padding;
+        padding-left: $padding;
+    } @else {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    }
+}
+
+@mixin make-flex-item-span($num) {
+    $value: percentage($num / $items);
+
+    .flex__item--span-#{$num} {
+        flex: 0 0 $value;
+        max-width: $value;
+    }
+}
+
+@mixin text-size($font-size, $font-weight: $font-weight-regular) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}

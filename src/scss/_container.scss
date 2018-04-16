@@ -1,0 +1,8 @@
+.container {
+    position: relative;
+    max-width: $container-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+}

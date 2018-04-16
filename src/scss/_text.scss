@@ -1,0 +1,39 @@
+$text-aligments: left, right, center;
+
+.text--h1 {
+    @include text-size($font-3xl, $font-weight-semibold);
+}
+
+.text--h2 {
+    @include text-size($font-2xl, $font-weight-semibold);
+}
+
+.text--h3 {
+    @include text-size($font-xl, $font-weight-semibold);
+}
+
+.text--h4 {
+    @include text-size($font-l, $font-weight-semibold);
+}
+
+.text--h5 {
+    @include text-size($font-l);
+}
+
+.text--h6 {
+    @include text-size($font-m, $font-weight-semibold);
+}
+
+@each $align in $text-aligments {
+    .text--#{$align} {
+        text-align: $align;
+    }
+}
+
+.text--light {
+    color: $color-light;
+}
+
+.text--nowrap {
+    white-space: nowrap;
+}
